@@ -1,0 +1,10 @@
+{
+  "name": "ars-tax-consultancy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static website for ARS Tax Consultancy, Hyderabad",
+  "scripts": {
+    "start": "npx --yes serve src -l 8080",
+    "dev": "python -m http.server 8080 --directory src"
+  }
+}

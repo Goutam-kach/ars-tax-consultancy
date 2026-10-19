@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="ARS Tax Consultancy logo">
+  <rect width="48" height="48" rx="11" fill="#0f2a4a"/>
+  <path d="M9 36 L19 24 L26 30 L39 13" fill="none" stroke="#c8963e" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M32 13h7v7" fill="none" stroke="#c8963e" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="24" y="43" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="9" font-weight="700" fill="#ffffff" letter-spacing="1.5">ARS</text>
+</svg>
