@@ -24,6 +24,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 body {
   margin: 0;
@@ -55,6 +56,7 @@ p { margin: 0 0 1em; }
 .topbar { background: var(--navy); color: #cfd9e6; font-size: .85rem; }
 .topbar__inner { display: flex; justify-content: space-between; gap: 1rem; padding: .5rem 0; flex-wrap: wrap; }
 .topbar__links { display: flex; gap: 1.4rem; flex-wrap: wrap; }
+.topbar__links a { color: inherit; }
 
 /* ---------- Header / nav ---------- */
 .site-header {
@@ -284,6 +286,7 @@ td.due { font-weight: 600; color: var(--teal-dark); white-space: nowrap; }
 .contact-list li { display: flex; gap: 1rem; align-items: flex-start; }
 .contact-list strong { display: block; color: var(--navy); }
 .contact-list span { color: var(--muted); }
+.contact-list a { color: var(--muted); }
 .map-placeholder {
   border: 2px dashed #b9c7d6; border-radius: var(--radius); background: var(--bg); min-height: 200px;
   display: grid; place-items: center; text-align: center; color: var(--muted); padding: 1rem;
@@ -309,6 +312,7 @@ td.due { font-weight: 600; color: var(--teal-dark); white-space: nowrap; }
 .site-footer .brand { color: #fff; margin-bottom: 1rem; }
 .site-footer .brand__text small { color: #8ea3bb; }
 .footer__contact li { display: flex; gap: .7rem; align-items: flex-start; }
+.footer__contact a { color: inherit; }
 .footer__contact .icon-chip--round { background: rgba(255,255,255,.92); width: 34px; height: 34px; }
 .footer__contact .icon-chip--round img { width: 17px; height: 17px; }
 .footer__bottom { margin-top: 2.5rem; padding: 1.3rem 0; border-top: 1px solid #1f3a5a; display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8rem; font-size: .85rem; color: #8ea3bb; }

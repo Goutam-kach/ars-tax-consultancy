@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ARS Tax Consultancy | Accounting, Tax &amp; Compliance in Hyderabad</title>
-  <meta name="description" content="ARS Tax Consultancy, Hyderabad: accounting on Tally, Zoho Books and Odoo, GST, TDS, payroll, ROC, cost audit, financial and legal advisory, plus a free income tax calculator.">
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title data-config-template="{business.name} | Accounting, Tax &amp; Compliance in {business.city}">ARS Tax Consultancy | Accounting, Tax &amp; Compliance in Hyderabad</title>
+  <meta name="description" data-config-template="{business.name}, {business.city}: accounting on Tally, Zoho Books and Odoo, GST, TDS, payroll, ROC, cost audit, financial and legal advisory, plus a free income tax calculator." content="ARS Tax Consultancy, Hyderabad: accounting on Tally, Zoho Books and Odoo, GST, TDS, payroll, ROC, cost audit, financial and legal advisory, plus a free income tax calculator.">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" data-config-favicon>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -13,16 +14,16 @@
 
   <div class="topbar">
     <div class="container topbar__inner">
-      <span>Hyderabad, Telangana</span>
-      <span class="topbar__links"><span>[Phone Number]</span><span>[Email Address]</span></span>
+      <span data-config-template="{business.city}, {business.state}">Hyderabad, Telangana</span>
+      <span class="topbar__links"><a data-config="contact.phone" data-config-link="phone">Phone number</a><a data-config="contact.email" data-config-link="email">Email address</a></span>
     </div>
   </div>
 
   <header class="site-header">
     <div class="container header__inner">
-      <a class="brand" href="index.html" aria-label="ARS Tax Consultancy - home">
-        <img src="assets/images/logo-mark.svg" width="44" height="44" alt="">
-        <span class="brand__text"><strong>ARS Tax Consultancy</strong><small>Accounting · Tax · Compliance</small></span>
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo-mark.svg" data-config-logo width="44" height="44" alt="">
+        <span class="brand__text"><strong data-config="business.name">ARS Tax Consultancy</strong><small data-config="business.tagline">Accounting · Tax · Compliance</small></span>
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <nav id="primary-nav" class="nav" aria-label="Primary">
@@ -44,9 +45,9 @@
     <section class="hero">
       <div class="container hero__grid">
         <div>
-          <span class="eyebrow">Accounting · Tax · Compliance — Hyderabad</span>
+          <span class="eyebrow">Accounting · Tax · Compliance — <span data-config="business.city">Hyderabad</span></span>
           <h1>Accounting and compliance, handled on time. Every time.</h1>
-          <p class="lead">ARS Tax Consultancy takes care of your accounts, GST, TDS, payroll, ROC compliance, cost records, and financial and legal advisory, so you can focus on running and growing your business.</p>
+          <p class="lead" data-config="business.heroDescription">We take care of your accounts, GST, TDS, payroll, ROC compliance, cost records, and financial and legal advisory, so you can focus on running and growing your business.</p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="contact.html">Request a Proposal</a>
             <a class="btn btn--ghost" href="compliance-calendar.html">View Compliance Calendar</a>
@@ -200,7 +201,7 @@
     <section class="section section--alt">
       <div class="container split">
         <div class="reveal">
-          <span class="kicker">Why ARS Tax Consultancy</span>
+          <span class="kicker">Why <span data-config="business.name">ARS Tax Consultancy</span></span>
           <h2>A fresh team with deep, hands-on experience</h2>
           <p>We are a newly established firm of seasoned professionals with diverse backgrounds, united by one commitment: personalised service built around your business.</p>
           <ul class="feature-list">
@@ -266,18 +267,18 @@
           <span class="kicker">Client voices</span>
           <h2>What clients say</h2>
         </div>
-        <div class="grid grid--3">
-          <article class="card quote reveal">
-            <blockquote>“[Client testimonial placeholder. Add a short quote about the quality and timeliness of the service here.]”</blockquote>
-            <footer><img src="assets/images/avatar-placeholder.svg" width="46" height="46" alt="" loading="lazy"><div><strong>[Client Name]</strong><span>[Designation], [Company]</span></div></footer>
+        <div class="grid grid--3" data-config-list="testimonials">
+          <article class="card quote reveal" data-config-item="testimonial">
+            <blockquote data-config-field="quote">Client testimonial</blockquote>
+            <footer><img src="assets/images/avatar-placeholder.svg" data-config-image="photo" width="46" height="46" alt="" loading="lazy"><div><strong data-config-field="name">Client Name</strong><span data-config-field="byline">Role, Company</span></div></footer>
           </article>
-          <article class="card quote reveal">
-            <blockquote>“[Client testimonial placeholder. Add a short quote about communication and clarity of reporting here.]”</blockquote>
-            <footer><img src="assets/images/avatar-placeholder.svg" width="46" height="46" alt="" loading="lazy"><div><strong>[Client Name]</strong><span>[Designation], [Company]</span></div></footer>
+          <article class="card quote reveal" data-config-item="testimonial">
+            <blockquote data-config-field="quote">Client testimonial</blockquote>
+            <footer><img src="assets/images/avatar-placeholder.svg" data-config-image="photo" width="46" height="46" alt="" loading="lazy"><div><strong data-config-field="name">Client Name</strong><span data-config-field="byline">Role, Company</span></div></footer>
           </article>
-          <article class="card quote reveal">
-            <blockquote>“[Client testimonial placeholder. Add a short quote about the compliance support experience here.]”</blockquote>
-            <footer><img src="assets/images/avatar-placeholder.svg" width="46" height="46" alt="" loading="lazy"><div><strong>[Client Name]</strong><span>[Designation], [Company]</span></div></footer>
+          <article class="card quote reveal" data-config-item="testimonial">
+            <blockquote data-config-field="quote">Client testimonial</blockquote>
+            <footer><img src="assets/images/avatar-placeholder.svg" data-config-image="photo" width="46" height="46" alt="" loading="lazy"><div><strong data-config-field="name">Client Name</strong><span data-config-field="byline">Role, Company</span></div></footer>
           </article>
         </div>
       </div>
@@ -330,10 +331,10 @@
       <div class="footer__grid">
         <div>
           <a class="brand" href="index.html">
-            <img src="assets/images/logo-mark.svg" width="44" height="44" alt="">
-            <span class="brand__text"><strong>ARS Tax Consultancy</strong><small>Accounting · Tax · Compliance</small></span>
+            <img src="assets/images/logo-mark.svg" data-config-logo width="44" height="44" alt="">
+            <span class="brand__text"><strong data-config="business.name">ARS Tax Consultancy</strong><small data-config="business.tagline">Accounting · Tax · Compliance</small></span>
           </a>
-          <p>Personalised accounting, tax and compliance services for growing businesses in Hyderabad.</p>
+          <p data-config="business.footerDescription">Personalised accounting, tax and compliance services for growing businesses.</p>
         </div>
         <div>
           <h4>Quick links</h4>
@@ -360,23 +361,24 @@
             <li><a href="services.html#legal">Legal Advisory</a></li>
           </ul>
         </div>
-        <div>
+        <div data-config-contact-block>
           <h4>Contact</h4>
           <ul class="footer__contact">
-            <li><span class="icon-chip icon-chip--round"><img src="assets/images/icons/map-pin.svg" alt=""></span><span>[Office Address], Hyderabad, Telangana – [PIN Code]</span></li>
-            <li><span class="icon-chip icon-chip--round"><img src="assets/images/icons/phone.svg" alt=""></span><span>[Phone Number]</span></li>
-            <li><span class="icon-chip icon-chip--round"><img src="assets/images/icons/mail.svg" alt=""></span><span>[Email Address]</span></li>
+            <li data-config-optional="contact.address"><span class="icon-chip icon-chip--round"><img src="assets/images/icons/map-pin.svg" alt=""></span><span data-config="contact.address">Office address</span></li>
+            <li data-config-optional="contact.phone"><span class="icon-chip icon-chip--round"><img src="assets/images/icons/phone.svg" alt=""></span><a data-config="contact.phone" data-config-link="phone">Phone number</a></li>
+            <li data-config-optional="contact.email"><span class="icon-chip icon-chip--round"><img src="assets/images/icons/mail.svg" alt=""></span><a data-config="contact.email" data-config-link="email">Email address</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <span>© <span data-year>2026</span> ARS Tax Consultancy, Hyderabad. All rights reserved.</span>
+        <span>© <span data-year>2026</span> <span data-config="business.name">ARS Tax Consultancy</span>, <span data-config="business.city">Hyderabad</span>. All rights reserved.</span>
         <span>Information on this website is for general guidance and is not professional advice.</span>
       </div>
     </div>
   </footer>
 
   <button class="to-top" type="button" aria-label="Back to top">↑</button>
+  <script src="assets/js/site-config.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

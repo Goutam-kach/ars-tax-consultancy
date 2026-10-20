@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Us | ARS Tax Consultancy, Hyderabad</title>
-  <meta name="description" content="Learn about ARS Tax Consultancy, a newly established Hyderabad firm of seasoned accounting and tax professionals committed to personalised service.">
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title data-config-template="About Us | {business.name}, {business.city}">About Us | ARS Tax Consultancy, Hyderabad</title>
+  <meta name="description" data-config-template="Learn about {business.name}, an accounting and tax consultancy firm based in {business.city}.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" data-config-favicon>
+  <meta name="robots" content="noindex, nofollow, noarchive">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -13,16 +14,16 @@
 
   <div class="topbar">
     <div class="container topbar__inner">
-      <span>Hyderabad, Telangana</span>
-      <span class="topbar__links"><span>[Phone Number]</span><span>[Email Address]</span></span>
+      <span data-config-template="{business.city}, {business.state}">Hyderabad, Telangana</span>
+      <span class="topbar__links"><a data-config="contact.phone" data-config-link="phone">Phone number</a><a data-config="contact.email" data-config-link="email">Email address</a></span>
     </div>
   </div>
 
   <header class="site-header">
     <div class="container header__inner">
-      <a class="brand" href="index.html" aria-label="ARS Tax Consultancy - home">
-        <img src="assets/images/logo-mark.svg" width="44" height="44" alt="">
-        <span class="brand__text"><strong>ARS Tax Consultancy</strong><small>Accounting · Tax · Compliance</small></span>
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo-mark.svg" data-config-logo width="44" height="44" alt="">
+        <span class="brand__text"><strong data-config="business.name">ARS Tax Consultancy</strong><small data-config="business.tagline">Accounting · Tax · Compliance</small></span>
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <nav id="primary-nav" class="nav" aria-label="Primary">
@@ -43,7 +44,7 @@
     <section class="page-hero">
       <div class="container">
         <div class="breadcrumb"><a href="index.html">Home</a> / About</div>
-        <h1>About ARS Tax Consultancy</h1>
+        <h1>About <span data-config="business.name">ARS Tax Consultancy</span></h1>
         <p>A team of seasoned professionals, united by a shared commitment to deliver personalised services tailored to your specific requirements.</p>
       </div>
     </section>
@@ -53,7 +54,7 @@
         <div class="reveal">
           <span class="kicker">Our story</span>
           <h2>Fresh perspectives. Dependable execution.</h2>
-          <p>ARS Tax Consultancy is a newly established accounting and tax consultancy firm based in Hyderabad. Our team brings diverse backgrounds and expertise, gained through experience both before and after qualification.</p>
+          <p data-config="business.aboutDescription">A team of seasoned professionals with diverse backgrounds and expertise, committed to tailored accounting and tax support.</p>
           <p>As a fresh team, we bring innovative solutions and unwavering dedication to our clients' needs. Every client is unique, with distinct aspirations and challenges, so we take the time to listen, understand and tailor our services to your objectives.</p>
           <p>We look forward to building long-term relationships based on trust, integrity and professionalism, and to helping you thrive in today's competitive marketplace.</p>
         </div>
@@ -94,26 +95,25 @@
         <div class="section-head reveal">
           <span class="kicker">Our people</span>
           <h2>Meet the team</h2>
-          <p>Replace the placeholders below with your team's photos, names and qualifications.</p>
         </div>
-        <div class="grid grid--3">
-          <article class="card team-card reveal">
-            <img src="assets/images/avatar-placeholder.svg" width="110" height="110" alt="Photo placeholder" loading="lazy">
-            <h3>[Proprietor Name]</h3>
-            <div class="role">Proprietor</div>
-            <p>[Short biography placeholder: qualifications, years of experience and areas of focus.]</p>
+        <div class="grid grid--3" data-config-list="team">
+          <article class="card team-card reveal" data-config-item="team-member">
+            <img src="assets/images/avatar-placeholder.svg" data-config-image="photo" width="110" height="110" alt="" loading="lazy">
+            <h3 data-config-field="name">Team member</h3>
+            <div class="role" data-config-field="role">Role</div>
+            <p data-config-field="bio">Biography</p>
           </article>
-          <article class="card team-card reveal">
-            <img src="assets/images/avatar-placeholder.svg" width="110" height="110" alt="Photo placeholder" loading="lazy">
-            <h3>[Team Member Name]</h3>
-            <div class="role">[Designation]</div>
-            <p>[Short biography placeholder: qualifications, years of experience and areas of focus.]</p>
+          <article class="card team-card reveal" data-config-item="team-member">
+            <img src="assets/images/avatar-placeholder.svg" data-config-image="photo" width="110" height="110" alt="" loading="lazy">
+            <h3 data-config-field="name">Team member</h3>
+            <div class="role" data-config-field="role">Role</div>
+            <p data-config-field="bio">Biography</p>
           </article>
-          <article class="card team-card reveal">
-            <img src="assets/images/avatar-placeholder.svg" width="110" height="110" alt="Photo placeholder" loading="lazy">
-            <h3>[Team Member Name]</h3>
-            <div class="role">[Designation]</div>
-            <p>[Short biography placeholder: qualifications, years of experience and areas of focus.]</p>
+          <article class="card team-card reveal" data-config-item="team-member">
+            <img src="assets/images/avatar-placeholder.svg" data-config-image="photo" width="110" height="110" alt="" loading="lazy">
+            <h3 data-config-field="name">Team member</h3>
+            <div class="role" data-config-field="role">Role</div>
+            <p data-config-field="bio">Biography</p>
           </article>
         </div>
       </div>
@@ -137,10 +137,10 @@
       <div class="footer__grid">
         <div>
           <a class="brand" href="index.html">
-            <img src="assets/images/logo-mark.svg" width="44" height="44" alt="">
-            <span class="brand__text"><strong>ARS Tax Consultancy</strong><small>Accounting · Tax · Compliance</small></span>
+            <img src="assets/images/logo-mark.svg" data-config-logo width="44" height="44" alt="">
+            <span class="brand__text"><strong data-config="business.name">ARS Tax Consultancy</strong><small data-config="business.tagline">Accounting · Tax · Compliance</small></span>
           </a>
-          <p>Personalised accounting, tax and compliance services for growing businesses in Hyderabad.</p>
+          <p data-config="business.footerDescription">Personalised accounting, tax and compliance services for growing businesses.</p>
         </div>
         <div>
           <h4>Quick links</h4>
@@ -167,23 +167,24 @@
             <li><a href="services.html#legal">Legal Advisory</a></li>
           </ul>
         </div>
-        <div>
+        <div data-config-contact-block>
           <h4>Contact</h4>
           <ul class="footer__contact">
-            <li><span class="icon-chip icon-chip--round"><img src="assets/images/icons/map-pin.svg" alt=""></span><span>[Office Address], Hyderabad, Telangana – [PIN Code]</span></li>
-            <li><span class="icon-chip icon-chip--round"><img src="assets/images/icons/phone.svg" alt=""></span><span>[Phone Number]</span></li>
-            <li><span class="icon-chip icon-chip--round"><img src="assets/images/icons/mail.svg" alt=""></span><span>[Email Address]</span></li>
+            <li data-config-optional="contact.address"><span class="icon-chip icon-chip--round"><img src="assets/images/icons/map-pin.svg" alt=""></span><span data-config="contact.address">Office address</span></li>
+            <li data-config-optional="contact.phone"><span class="icon-chip icon-chip--round"><img src="assets/images/icons/phone.svg" alt=""></span><a data-config="contact.phone" data-config-link="phone">Phone number</a></li>
+            <li data-config-optional="contact.email"><span class="icon-chip icon-chip--round"><img src="assets/images/icons/mail.svg" alt=""></span><a data-config="contact.email" data-config-link="email">Email address</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <span>© <span data-year>2026</span> ARS Tax Consultancy, Hyderabad. All rights reserved.</span>
+        <span>© <span data-year>2026</span> <span data-config="business.name">ARS Tax Consultancy</span>, <span data-config="business.city">Hyderabad</span>. All rights reserved.</span>
         <span>Information on this website is for general guidance and is not professional advice.</span>
       </div>
     </div>
   </footer>
 
   <button class="to-top" type="button" aria-label="Back to top">↑</button>
+  <script src="assets/js/site-config.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

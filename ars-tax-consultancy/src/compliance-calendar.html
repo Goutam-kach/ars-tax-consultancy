@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Compliance Calendar | ARS Tax Consultancy, Hyderabad</title>
+  <title data-config-template="Compliance Calendar | {business.name}, {business.city}">Compliance Calendar | ARS Tax Consultancy, Hyderabad</title>
   <meta name="description" content="Scope of work and due dates for accounting, GST, TDS, payroll, ROC, income tax and audit compliance.">
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" data-config-favicon>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -13,16 +14,16 @@
 
   <div class="topbar">
     <div class="container topbar__inner">
-      <span>Hyderabad, Telangana</span>
-      <span class="topbar__links"><span>[Phone Number]</span><span>[Email Address]</span></span>
+      <span data-config-template="{business.city}, {business.state}">Hyderabad, Telangana</span>
+      <span class="topbar__links"><a data-config="contact.phone" data-config-link="phone">Phone number</a><a data-config="contact.email" data-config-link="email">Email address</a></span>
     </div>
   </div>
 
   <header class="site-header">
     <div class="container header__inner">
-      <a class="brand" href="index.html" aria-label="ARS Tax Consultancy - home">
-        <img src="assets/images/logo-mark.svg" width="44" height="44" alt="">
-        <span class="brand__text"><strong>ARS Tax Consultancy</strong><small>Accounting · Tax · Compliance</small></span>
+      <a class="brand" href="index.html">
+        <img src="assets/images/logo-mark.svg" data-config-logo width="44" height="44" alt="">
+        <span class="brand__text"><strong data-config="business.name">ARS Tax Consultancy</strong><small data-config="business.tagline">Accounting · Tax · Compliance</small></span>
       </a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
       <nav id="primary-nav" class="nav" aria-label="Primary">
@@ -242,10 +243,10 @@
       <div class="footer__grid">
         <div>
           <a class="brand" href="index.html">
-            <img src="assets/images/logo-mark.svg" width="44" height="44" alt="">
-            <span class="brand__text"><strong>ARS Tax Consultancy</strong><small>Accounting · Tax · Compliance</small></span>
+            <img src="assets/images/logo-mark.svg" data-config-logo width="44" height="44" alt="">
+            <span class="brand__text"><strong data-config="business.name">ARS Tax Consultancy</strong><small data-config="business.tagline">Accounting · Tax · Compliance</small></span>
           </a>
-          <p>Personalised accounting, tax and compliance services for growing businesses in Hyderabad.</p>
+          <p data-config="business.footerDescription">Personalised accounting, tax and compliance services for growing businesses.</p>
         </div>
         <div>
           <h4>Quick links</h4>
@@ -272,23 +273,24 @@
             <li><a href="services.html#legal">Legal Advisory</a></li>
           </ul>
         </div>
-        <div>
+        <div data-config-contact-block>
           <h4>Contact</h4>
           <ul class="footer__contact">
-            <li><span class="icon-chip icon-chip--round"><img src="assets/images/icons/map-pin.svg" alt=""></span><span>[Office Address], Hyderabad, Telangana – [PIN Code]</span></li>
-            <li><span class="icon-chip icon-chip--round"><img src="assets/images/icons/phone.svg" alt=""></span><span>[Phone Number]</span></li>
-            <li><span class="icon-chip icon-chip--round"><img src="assets/images/icons/mail.svg" alt=""></span><span>[Email Address]</span></li>
+            <li data-config-optional="contact.address"><span class="icon-chip icon-chip--round"><img src="assets/images/icons/map-pin.svg" alt=""></span><span data-config="contact.address">Office address</span></li>
+            <li data-config-optional="contact.phone"><span class="icon-chip icon-chip--round"><img src="assets/images/icons/phone.svg" alt=""></span><a data-config="contact.phone" data-config-link="phone">Phone number</a></li>
+            <li data-config-optional="contact.email"><span class="icon-chip icon-chip--round"><img src="assets/images/icons/mail.svg" alt=""></span><a data-config="contact.email" data-config-link="email">Email address</a></li>
           </ul>
         </div>
       </div>
       <div class="footer__bottom">
-        <span>© <span data-year>2026</span> ARS Tax Consultancy, Hyderabad. All rights reserved.</span>
+        <span>© <span data-year>2026</span> <span data-config="business.name">ARS Tax Consultancy</span>, <span data-config="business.city">Hyderabad</span>. All rights reserved.</span>
         <span>Information on this website is for general guidance and is not professional advice.</span>
       </div>
     </div>
   </footer>
 
   <button class="to-top" type="button" aria-label="Back to top">↑</button>
+  <script src="assets/js/site-config.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

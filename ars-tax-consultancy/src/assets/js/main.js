@@ -1,9 +1,6 @@
 (function () {
   "use strict";
 
-  // Placeholder recipient for the contact form - replace with the firm's real email address.
-  var CONTACT_EMAIL = "your-email@example.com";
-
   document.documentElement.classList.add("js");
 
   // ---------- Mobile navigation ----------
@@ -112,6 +109,14 @@
         form.reportValidity();
         return;
       }
+      var recipient = window.SITE_CONFIG && window.SITE_CONFIG.contact
+        ? String(window.SITE_CONFIG.contact.email || "").trim()
+        : "";
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(recipient)) {
+        status.textContent = "The contact email is not configured. Add it to assets/js/site-config.js before using this form.";
+        status.classList.add("is-visible");
+        return;
+      }
       var d = new FormData(form);
       var subject = "Enquiry: " + d.get("service") + " - " + d.get("name");
       var body = [
@@ -123,10 +128,10 @@
         "",
         d.get("message")
       ].join("\n");
-      window.location.href = "mailto:" + CONTACT_EMAIL +
+      window.location.href = "mailto:" + recipient +
         "?subject=" + encodeURIComponent(subject) +
         "&body=" + encodeURIComponent(body);
-      status.textContent = "Thank you. Your email app should open with the enquiry ready to send. If it does not, please contact us using the details shown.";
+      status.textContent = "Your email app should open with the enquiry ready to send. No data is sent to this website. If it does not open, please use the contact details shown.";
       status.classList.add("is-visible");
       form.reset();
     });
