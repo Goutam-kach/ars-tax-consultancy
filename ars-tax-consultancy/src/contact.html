@@ -80,7 +80,7 @@
 
         <div class="form-card reveal">
           <h2 style="font-size:1.5rem">Request a proposal</h2>
-          <form id="contact-form" novalidate>
+          <form id="contact-form" action="https://formspree.io/f/mkjolrwg" method="POST" novalidate>
             <div class="form-row">
               <div class="field">
                 <label for="name">Full name <span class="req">*</span></label>
@@ -122,7 +122,7 @@
               <textarea id="message" name="message" required placeholder="[Type of business, approximate monthly transactions, number of employees, services needed…]"></textarea>
             </div>
             <label class="check">
-              <input type="checkbox" required>
+              <input type="checkbox" name="consent" value="Agreed" required>
               <span>I agree to be contacted about my enquiry.</span>
             </label>
             <button class="btn btn--primary" type="submit">Send Enquiry</button>

@@ -99,41 +99,40 @@
     if (preset) preset.click(); else apply();
   }
 
-  // ---------- Contact form (opens the visitor's email app) ----------
+  // ---------- Contact form (submits to Formspree) ----------
   var form = document.getElementById("contact-form");
   if (form) {
     var status = document.getElementById("form-status");
-    form.addEventListener("submit", function (e) {
+    var submitButton = form.querySelector('[type="submit"]');
+    form.addEventListener("submit", async function (e) {
       e.preventDefault();
       if (!form.checkValidity()) {
         form.reportValidity();
         return;
       }
-      var recipient = window.SITE_CONFIG && window.SITE_CONFIG.contact
-        ? String(window.SITE_CONFIG.contact.email || "").trim()
-        : "";
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(recipient)) {
-        status.textContent = "The contact email is not configured. Add it to assets/js/site-config.js before using this form.";
-        status.classList.add("is-visible");
-        return;
-      }
-      var d = new FormData(form);
-      var subject = "Enquiry: " + d.get("service") + " - " + d.get("name");
-      var body = [
-        "Name: " + d.get("name"),
-        "Company: " + (d.get("company") || "-"),
-        "Phone: " + d.get("phone"),
-        "Email: " + d.get("email"),
-        "Service of interest: " + d.get("service"),
-        "",
-        d.get("message")
-      ].join("\n");
-      window.location.href = "mailto:" + recipient +
-        "?subject=" + encodeURIComponent(subject) +
-        "&body=" + encodeURIComponent(body);
-      status.textContent = "Your email app should open with the enquiry ready to send. No data is sent to this website. If it does not open, please use the contact details shown.";
+      var formData = new FormData(form);
+      formData.set("_subject", "Enquiry: " + formData.get("service") + " - " + formData.get("name"));
+      submitButton.disabled = true;
+      status.textContent = "Sending your enquiry...";
       status.classList.add("is-visible");
-      form.reset();
+
+      try {
+        var response = await fetch(form.action, {
+          method: "POST",
+          body: formData,
+          headers: { Accept: "application/json" }
+        });
+        if (!response.ok) {
+          throw new Error("Formspree returned HTTP " + response.status);
+        }
+        status.textContent = "Thank you. Your enquiry has been sent successfully.";
+        form.reset();
+      } catch (error) {
+        console.error("Contact form submission failed:", error);
+        status.textContent = "We could not send your enquiry. Please check your connection and try again, or contact us by phone or email.";
+      } finally {
+        submitButton.disabled = false;
+      }
     });
   }
 })();
